@@ -8,7 +8,7 @@ RANDOM_SEED = 42
 DEVICE = 'cpu'
 OPTIMIZER = 'Adam'
 OPTIMIZER_KWARGS = {"lr": 0.05}  # learning rate at 0.05
-PROJECT_NAME = 'WN18RR-embedding'
+PROJECT_NAME = 'embedding'
 
 
 def create_dataset(triples_df: pd.DataFrame) -> TriplesFactory:
@@ -49,4 +49,7 @@ def create_pipeline(train_set: TriplesFactory, test_set: TriplesFactory, model_n
             "project": PROJECT_NAME,
         }
     )
+        
+       
+
     return train_pipeline
